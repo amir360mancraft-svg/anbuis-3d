@@ -1,3 +1,4 @@
+
 plugins {
     id 'fabric-loom' version '1.14-SNAPSHOT'
     id 'maven-publish'
@@ -6,26 +7,33 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
-base { archivesName = project.archives_base_name }
+base {
+    archivesName = project.archives_base_name
+}
 
 repositories {
     mavenCentral()
-    maven { url = 'https://maven.fabricmc.net/' }
+    maven {
+        url = 'https://maven.fabricmc.net/'
+    }
 }
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:intermediary:${project.minecraft_version}:v2"
+
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    modImplementation("io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}") {
-        include()
-    }
+
+    modImplementation "io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"
+    include "io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"
 }
 
 processResources {
     inputs.property 'version', project.version
-    filesMatching('fabric.mod.json') { expand 'version': project.version }
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {

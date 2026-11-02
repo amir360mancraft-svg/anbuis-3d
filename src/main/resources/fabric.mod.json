@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "anubis3d_standalone",
+  "version": "1.0.0",
+  "name": "Anubis 3D Character Standalone",
+  "description": "Standalone local-player-only port of the Anubis 0.9.9 3D character renderer.",
+  "environment": "client",
+  "entrypoints": { "client": ["net.anubis.client.Anubis3DClient"] },
+  "mixins": ["anubis3d.mixins.json"],
+  "depends": { "fabricloader": ">=0.18.5", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}

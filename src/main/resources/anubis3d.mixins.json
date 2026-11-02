@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.example.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinCharacterAvatarRenderState",
+    "MixinCharacterAvatarRenderer",
+    "MixinCharacterLighting",
+    "MixinCharacterLivingEntityRenderer",
+    "MixinCharacterPlayerModel"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "anubis3d_standalone",
-  "version": "1.0.0",
-  "name": "Anubis 3D Character Standalone",
-  "description": "Standalone local-player-only port of the Anubis 0.9.9 3D character renderer.",
+  "version": "1.1.0",
+  "name": "Anubis 3D Character and Knife Standalone",
+  "description": "Standalone local-player 3D character renderer with first-person Butterfly, Karambit and Katana models and inspect animations.",
   "environment": "client",
   "entrypoints": { "client": ["net.anubis.client.Anubis3DClient"] },
   "mixins": ["anubis3d.mixins.json"],

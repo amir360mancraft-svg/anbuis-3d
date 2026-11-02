@@ -1,0 +1,21 @@
+Anubis 3D Knife Port Patch
+Target: Fabric 1.21.11, Java 21
+
+HOW TO APPLY
+1. Extract this ZIP into the ROOT of your existing anbuis-3d repository.
+2. Allow the files to merge/overwrite when prompted.
+3. Commit and push the changes to GitHub.
+4. Let the existing GitHub Actions build run. This patch has not been compiled against your exact repository checkout in this environment.
+
+IN-GAME COMMANDS
+/knifeinspect       Play the current knife's inspect animation.
+/knifeinspect next Cycle Butterfly -> Karambit -> Katana and play inspect.
+/knifeinspect off  Restore vanilla sword rendering.
+/knifeinspect on   Enable the 3D knife replacement.
+
+NOTES
+- The 3D knife replaces the main-hand sword model locally (client-side only).
+- The vanilla player arm remains rendered by Minecraft.
+- Character rendering files are not changed.
+- The knife models are procedural voxel meshes ported from the supplied Anubis 0.9.9 source.
+- Retain the project's GPL-3.0-only license and original attribution notices.
